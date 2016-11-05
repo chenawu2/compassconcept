@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fI3-KP-LMX" customClass="MOJOReplicatorView" customModule="Test" customModuleProvider="target">
+                                <rect key="frame" x="20" y="170" width="335" height="335"/>
+                                <color key="backgroundColor" red="0.35294117650000001" green="0.39607843139999999" blue="0.50130208333333337" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="fI3-KP-LMX" secondAttribute="height" multiplier="1:1" id="pPc-3H-Ola"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="se5-U0-uuB">
+                                <rect key="frame" x="170" y="536.5" width="34" height="30"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vxn-wI-d6z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O9w-Wq-ucM">
+                                <rect key="frame" x="170" y="598" width="34" height="30"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="heli:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ee5-CS-l9v"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.35294117650000001" green="0.39607843139999999" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="se5-U0-uuB" firstAttribute="centerX" secondItem="fI3-KP-LMX" secondAttribute="centerX" id="3p7-8A-fnZ"/>
+                            <constraint firstItem="O9w-Wq-ucM" firstAttribute="centerX" secondItem="se5-U0-uuB" secondAttribute="centerX" id="5Kc-Lq-lVb"/>
+                            <constraint firstAttribute="trailing" secondItem="fI3-KP-LMX" secondAttribute="trailing" constant="20" id="9I2-Mb-2uS"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="O9w-Wq-ucM" secondAttribute="bottom" constant="39" id="IKD-Wt-V2l"/>
+                            <constraint firstItem="se5-U0-uuB" firstAttribute="top" secondItem="fI3-KP-LMX" secondAttribute="bottom" constant="31.5" id="R7S-25-fBp"/>
+                            <constraint firstItem="fI3-KP-LMX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="150" id="kd9-EZ-Pk1"/>
+                            <constraint firstItem="O9w-Wq-ucM" firstAttribute="top" secondItem="se5-U0-uuB" secondAttribute="bottom" constant="31.5" id="pLv-9o-uz2"/>
+                            <constraint firstItem="fI3-KP-LMX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="qgV-7r-e5B"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="replicator" destination="fI3-KP-LMX" id="0wG-Fl-Ayb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
